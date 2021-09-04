@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileFragment"
+    android:padding="5dp"
+    >
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="2dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/profile_coverimg"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:elevation="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/taj" />
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-60dp"
+            android:elevation="40dp"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="Name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+
+            android:layout_marginTop="8dp"
+
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_post_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA"
+        android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/postview" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+</FrameLayout>

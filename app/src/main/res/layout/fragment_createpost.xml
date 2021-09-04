@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createpostFragment"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/caption_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What's in your mind"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+
+        android:background="@drawable/customforpost"/>
+    <ImageView
+        android:id="@+id/imagepreview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+        >
+<!--        <Button-->
+<!--            android:id="@+id/camera"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/customforpost"-->
+<!--            android:text=" camera"-->
+<!--            app:icon="@drawable/ic_baseline_image_24"-->
+<!--            app:iconGravity="textStart" />-->
+        <Button
+            android:id="@+id/choose_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/customforpost"
+            android:text=" photo"
+            app:icon="@drawable/ic_baseline_image_24"
+            app:iconGravity="textStart" />
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:padding="8dp"
+            android:background="@drawable/customforpost"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progreebar"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="uploading...."/>
+    </LinearLayout>
+</LinearLayout>
